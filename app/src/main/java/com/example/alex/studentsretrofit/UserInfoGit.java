@@ -19,6 +19,7 @@ public class UserInfoGit {
 
 
 void getInfo(String git, final Context context) {
+
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://api.github.com")
             .addConverterFactory(GsonConverterFactory.create())
@@ -32,10 +33,13 @@ void getInfo(String git, final Context context) {
         public void onResponse(Response<GitModels> response, Retrofit retrofit) {
             String name=response.body().getName();
             String mail=response.body().getEmail();
+            String avatar = response.body().getAvatarUrl();
             Log.d("log", "onResponse: "+name);
             Intent intent = new Intent(context,DetailUser.class);
             intent.putExtra("name",name);
             intent.putExtra("mail",mail);
+            intent.putExtra("avatar",avatar);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
 
         }

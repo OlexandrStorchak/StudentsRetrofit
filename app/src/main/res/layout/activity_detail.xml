@@ -6,13 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/detail_user_name_id"
-        android:gravity="center"
-        tools:text="name"
-        />
+
     <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -27,5 +21,11 @@
         tools:text="mail"
         android:paddingBottom="5dp"
     />
+    <ImageView
+        android:id="@+id/detail_user_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        />
 
 </LinearLayout>
