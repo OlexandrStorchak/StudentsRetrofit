@@ -19,13 +19,6 @@ public class GitModels {
         private String email;
 
 
-        public String getLogin() {
-            return login;
-        }
-
-        public void setLogin(String login) {
-            this.login = login;
-        }
 
 
         public String getAvatarUrl() {
@@ -33,9 +26,6 @@ public class GitModels {
         }
 
 
-        public void setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-        }
 
         public String getName() {
             return name;
@@ -52,9 +42,6 @@ public class GitModels {
         }
 
 
-        public void setEmail(String email) {
-            this.email = email;
-        }
 
     }
 
